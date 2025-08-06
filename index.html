@@ -1,0 +1,87 @@
+<!-- Screen 1: Mode Selection -->
+
+<div class="screen active" id="screen1">
+
+  <h1 class="glow">PLEASE CHOOSE ANY OPTION TO CONTINUE</h1>
+
+  <button onclick="selectMode('friends')">Play with Friends</button>
+
+  <button onclick="goToLevelSelect()">Play with Computer</button>
+
+</div>
+
+<!-- Screen 2 (Friends Mode): Game Board -->
+
+<div class="screen" id="gameScreen">
+
+  <div class="scoreboard" id="friendScoreboard">
+
+    <div>Player X: <span id="scoreX">0</span></div>
+
+    <div>Player O: <span id="scoreO">0</span></div>
+
+  </div>
+
+  <h2 id="turnText"></h2>
+
+  <button onclick="goToScreen('screen1')">← Back</button>
+
+  <div class="board" id="board"></div>
+
+</div>
+
+<!-- Screen 2 (Computer Mode): Level Select -->
+
+<div class="screen" id="levelScreen">
+
+  <h2 class="glow">Select Difficulty</h2>
+
+  <button onclick="selectLevel('easy')">Easy</button>
+
+  <button onclick="selectLevel('normal')">Normal</button>
+
+  <button onclick="selectLevel('hard')">Hard</button>
+
+  <button onclick="goToScreen('screen1')">← Back</button>
+
+</div>
+
+<!-- Screen 3: Result for Friends Mode -->
+
+<div class="screen" id="friendResult">
+
+  <div class="scoreboard" id="friendScoreboardResult">
+
+    <div>Player X: <span id="scoreX2">0</span></div>
+
+    <div>Player O: <span id="scoreO2">0</span></div>
+
+  </div>
+
+  <h1 id="resultText" class="glow"></h1>
+
+  <button onclick="restartGame()">Restart</button>
+
+  <button onclick="goToScreen('screen1')">← Back</button>
+
+</div>
+
+<!-- Screen 4: Result for Computer Mode -->
+
+<div class="screen" id="computerResult">
+
+  <div class="scoreboard" id="computerScoreboard">
+
+    <div>Player: <span id="scorePlayer">0</span></div>
+
+    <div>Computer: <span id="scoreComputer">0</span></div>
+
+  </div>
+
+  <h1 id="compResultText" class="glow"></h1>
+
+  <button onclick="restartGame()">Restart</button>
+
+  <button onclick="goToScreen('screen1')">← Back</button>
+
+</div>
